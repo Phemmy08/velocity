@@ -7,7 +7,7 @@ body {
 
 /* Base nav styles remain the same */
 .navbar {
-  background-color: transparent;
+  background-color: skyblue;
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;

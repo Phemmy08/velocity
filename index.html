@@ -128,10 +128,11 @@
     <h2>Apply Now</h2>
     <p class="note">🧾 All hired applicants will receive their work-from-home equipment shipped directly from Velocity Flex Company.</p>
     <form 
-      action="https://formsubmit.co/velocityflexstaffing@outlook.com" 
-      method="POST" 
-      enctype="multipart/form-data" 
-      class="animate"
+    id="applicationForm"
+    action="https://formsubmit.co/velocityflexstaffing@outlook.com" 
+    method="POST"
+    enctype="multipart/form-data"
+    target="hidden_iframe"
     >
       <!-- Hidden fields for FormSubmit -->
       <input type="hidden" name="_captcha" value="false">
@@ -175,6 +176,8 @@
 
       <button type="submit" class="btn">Submit Application</button>
     </form>
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
   </div>
 </section>
 

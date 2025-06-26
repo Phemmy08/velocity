@@ -53,3 +53,17 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("applicationForm");
+
+  form.addEventListener("submit", () => {
+    setTimeout(() => {
+      alert("✅ Your application has been sent successfully!");
+      form.reset(); // optional: clears form fields
+    }, 500); // give it a moment to submit before showing alert
+  });
+});
