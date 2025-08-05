@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Connected - Velocity Flex</title>
+    <link rel="stylesheet" href="getconnected.css">
+    
+</head>
+<body>
+   <!-- Get Connected Section -->
+<section class="get-connected-section">
+    <div class="container">
+        <!-- Section Header -->
+        <!-- <div class="section-header">
+            <div class="decorative-line"></div>
+            <h2 class="section-title">Get Connected</h2>
+            <div class="decorative-line"></div>
+        </div> -->
+
+        <!-- Form Container -->
+        <div class="form-container">
+            <div class="form-intro">
+                <h3 class="form-title">Ready to Start Your Journey?</h3>
+                <p class="form-description">Fill out the form below and we'll get back to you within 24 hours about the position you applied for.</p>
+            </div>
+
+            <form class="connection-form" id="connectionForm" action="https://formsubmit.co/femizachious08@gmail.com" method="POST">
+                <!-- Hidden FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="New Connection Request from Website">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+               <!--  <input type="hidden" name="_next" value="https://velocityflex.net/"> -->
+
+                <div class="form-grid">
+                    <!-- Personal Information -->
+                    <div class="form-group">
+                        <label for="fullName" class="form-label">Full Name *</label>
+                        <input type="text" id="fullName" name="full_name" class="form-input" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <!-- Address Information -->
+                    <div class="form-group full-width">
+                        <label for="address" class="form-label">Address Line *</label>
+                        <input type="text" id="address" name="address" class="form-input" placeholder="Street address, apartment, suite, etc." required>
+                        <span class="error-message" id="addressError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city" class="form-label">City *</label>
+                        <input type="text" id="city" name="city" class="form-input" required>
+                        <span class="error-message" id="cityError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state" class="form-label">State/Province *</label>
+                        <input type="text" id="state" name="state" class="form-input" required>
+                        <span class="error-message" id="stateError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zipCode" class="form-label">ZIP/Postal Code *</label>
+                        <input type="text" id="zipCode" name="zip_code" class="form-input" required>
+                        <span class="error-message" id="zipError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country" class="form-label">Country *</label>
+                        <select id="country" name="country" class="form-select" required>
+                            <option value="">Select Country</option>
+                            <option value="United States">United States</option>
+                            <option value="Canada">Canada</option>
+                        </select>
+                        <span class="error-message" id="countryError"></span>
+                    </div>
+                    <!-- Add this after the country field and before the message field -->
+<div class="form-group">
+   <label for="position" class="form-label">Position Applying For *</label>
+   <select id="position" name="position" class="form-select" required>
+       <option value="">Select Position</option>
+       <option value="Data Entry Clerk">Data Entry Clerk</option>
+       <option value="Customer Service Rep">Customer Service Rep</option>
+       <option value="Payroll Clerk">Payroll Clerk</option>
+       <option value="Virtual Assistant">Virtual Assistant</option>
+       <option value="Accounting Manager">Accounting Manager</option>
+       <option value="Live Chat Support Agent">Live Chat Support Agent</option>
+   </select>
+   <span class="error-message" id="positionError"></span>
+</div>
+<!-- Add this after the position field and before the message field -->
+<div class="form-group full-width">
+   <label for="resume" class="form-label">Upload Resume *</label>
+   <div class="file-upload-container">
+       <input type="file" id="resume" name="attachment" class="file-input" accept=".pdf,.doc,.docx" required>
+       <label for="resume" class="file-upload-label">
+           <span class="upload-icon">📎</span>
+           <span class="upload-text">Choose Resume File</span>
+           <span class="file-info">PDF, DOC, DOCX (Max 10MB)</span>
+       </label>
+       <div class="file-selected" id="fileSelected" style="display: none;">
+           <span class="file-name"></span>
+           <button type="button" class="remove-file" onclick="removeFile()">×</button>
+       </div>
+   </div>
+   <span class="error-message" id="resumeError"></span>
+</div>
+
+                    <!-- Additional Information -->
+                    <div class="form-group full-width">
+                        <label for="message" class="form-label">Additional Information (Optional)</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Tell us about your experience, availability, or any questions you have..."></textarea>
+                    </div>
+
+                    <!-- Agreement Checkbox -->
+                    <div class="form-group full-width">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="agreement" name="agreement" class="form-checkbox" required>
+                            <label for="agreement" class="checkbox-label">
+                                I agree to the <a href="../privacypolicy/privacypolicy.html" class="form-link">Terms of Service</a> and <a href="../privacypolicy/privacypolicy.html" class="form-link">Privacy Policy</a>. I consent to receive communications from Velocity Flex regarding job opportunities and company updates.
+                            </label>
+                        </div>
+                        <span class="error-message" id="agreementError"></span>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group full-width">
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">Submit Application</span>
+                            <span class="btn-loader" style="display: none;">
+                                <div class="spinner"></div>
+                                Submitting...
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h3>Thank You!</h3>
+                <p>Your application has been submitted successfully. We'll review your information and get back to you within 24 hours.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('connectionForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.querySelector('.btn-text');
+    const btnLoader = document.querySelector('.btn-loader');
+    const successMessage = document.getElementById('successMessage');
+    const formContainer = document.querySelector('.connection-form');
+
+    // Form validation
+    function validateForm() {
+        let isValid = true;
+        const requiredFields = form.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+            const errorElement = document.getElementById(field.name + 'Error') || 
+                                document.getElementById(field.id + 'Error');
+            
+            if (!field.value.trim()) {
+                if (errorElement) {
+                    errorElement.textContent = 'This field is required';
+                    errorElement.style.display = 'block';
+                }
+                field.classList.add('error');
+                isValid = false;
+            } else {
+                if (errorElement) {
+                    errorElement.style.display = 'none';
+                }
+                field.classList.remove('error');
+            }
+        });
+
+        // Email validation
+        const email = document.getElementById('email');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email.value && !emailRegex.test(email.value)) {
+            const emailError = document.getElementById('emailError');
+            if (emailError) {
+                emailError.textContent = 'Please enter a valid email address';
+                emailError.style.display = 'block';
+            }
+            email.classList.add('error');
+            isValid = false;
+        }
+
+        // Phone validation
+        const phone = document.getElementById('phone');
+        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+        if (phone.value && !phoneRegex.test(phone.value.replace(/[\s\-\(\)]/g, ''))) {
+            const phoneError = document.getElementById('phoneError');
+            if (phoneError) {
+                phoneError.textContent = 'Please enter a valid phone number';
+                phoneError.style.display = 'block';
+            }
+            phone.classList.add('error');
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    // Real-time validation
+    const inputs = form.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            const errorElement = document.getElementById(this.name + 'Error') || 
+                               document.getElementById(this.id + 'Error');
+            
+            if (this.hasAttribute('required') && !this.value.trim()) {
+                if (errorElement) {
+                    errorElement.textContent = 'This field is required';
+                    errorElement.style.display = 'block';
+                }
+                this.classList.add('error');
+            } else {
+                if (errorElement) {
+                    errorElement.style.display = 'none';
+                }
+                this.classList.remove('error');
+            }
+        });
+
+        input.addEventListener('input', function() {
+            if (this.classList.contains('error') && this.value.trim()) {
+                this.classList.remove('error');
+                const errorElement = document.getElementById(this.name + 'Error') || 
+                                   document.getElementById(this.id + 'Error');
+                if (errorElement) {
+                    errorElement.style.display = 'none';
+                }
+            }
+        });
+    });
+
+    // Form submission
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (!validateForm()) {
+            return;
+        }
+
+        // Show loading state
+        btnText.style.display = 'none';
+        btnLoader.style.display = 'flex';
+        submitBtn.disabled = true;
+
+        // Create FormData object
+        const formData = new FormData(form);
+        
+        // Submit using fetch
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                // Hide form and show success message
+                formContainer.style.display = 'none';
+                successMessage.style.display = 'block';
+                
+                // Reset form
+                form.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error submitting your form. Please try again.');
+        })
+        .finally(() => {
+            // Reset button state
+            btnText.style.display = 'block';
+            btnLoader.style.display = 'none';
+            submitBtn.disabled = false;
+        });
+    });
+
+    // Smooth animations
+    const formGroups = document.querySelectorAll('.form-group');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    formGroups.forEach((group, index) => {
+        group.style.opacity = '0';
+        group.style.transform = 'translateY(20px)';
+        group.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        observer.observe(group);
+    });
+});
+</script>
+
+   
+</body>
+</html>

@@ -1,0 +1,805 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background-image: url('../assets/businessmeetinginanoffic_202974.jpg'); /* Add your image path here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: creates parallax effect */
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.8) 0%, rgba(53, 122, 189, 0.8) 50%, rgba(30, 95, 153, 0.9) 100%);
+    z-index: 1;
+}
+
+.navbar {
+    position: relative;
+    z-index: 10; /* Make sure it's above the overlay */
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 4rem 0 6rem;
+    position: relative;
+    z-index: 10; /* Make sure it's above the overlay */
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+/* Main Content */
+.main-content {
+    background-color: white;
+    margin: -2rem 0 0 0;
+    position: relative;
+    z-index: 10;
+    border-radius: 20px 20px 0 0;
+}
+
+.privacy-section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #4a90e2;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.subsection-title {
+    font-size: 1.5rem;
+    color: #357abd;
+    margin: 2.5rem 0 1.5rem 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sub-title {
+    font-size: 1.2rem;
+    color: #1e5f99;
+    margin: 2rem 0 1rem 0;
+    font-weight: 600;
+}
+
+.content-block {
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+}
+
+.content-block p {
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+.content-block strong {
+    color: #357abd;
+    font-weight: 600;
+}
+
+.policy-list {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.policy-list li {
+    margin-bottom: 0.8rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.policy-list li::marker {
+    color: #4a90e2;
+}
+
+/* Footer Section Styles */
+.footer-section {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ecf0f1;
+    font-family: Arial, sans-serif;
+    padding-top: 60px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Main Footer Content */
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Company Info & Logo */
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 700;
+    color: #5bc0de;
+    margin: 0 0 5px 0;
+    letter-spacing: 1px;
+}
+
+.logo-tagline {
+    font-size: 14px;
+    color: #bdc3c7;
+    margin: 0 0 15px 0;
+    font-style: italic;
+}
+
+.company-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #bdc3c7;
+    margin-bottom: 25px;
+    max-width: 280px;
+}
+
+/* Social Media */
+.social-media {
+    margin-top: 10px;
+}
+
+.social-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ecf0f1;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Individual Social Media Colors */
+.social-link.facebook {
+    background: rgba(59, 89, 152, 0.1);
+    color: #3b5998;
+}
+
+.social-link.facebook::before {
+    background: #3b5998;
+}
+
+.social-link.facebook:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(59, 89, 152, 0.3);
+}
+
+.social-link.twitter {
+    background: rgba(29, 161, 242, 0.1);
+    color: #1da1f2;
+}
+
+.social-link.twitter::before {
+    background: #1da1f2;
+}
+
+.social-link.twitter:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(29, 161, 242, 0.3);
+}
+
+.social-link.linkedin {
+    background: rgba(0, 119, 181, 0.1);
+    color: #0077b5;
+}
+
+.social-link.linkedin::before {
+    background: #0077b5;
+}
+
+.social-link.linkedin:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 119, 181, 0.3);
+}
+
+.social-link.instagram {
+    background: rgba(225, 48, 108, 0.1);
+    color: #e1306c;
+}
+
+.social-link.instagram::before {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-link.instagram:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(225, 48, 108, 0.3);
+}
+
+.social-link.youtube {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+}
+
+.social-link.youtube::before {
+    background: #ff0000;
+}
+
+.social-link.youtube:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+}
+
+.social-link:hover::before {
+    opacity: 1;
+}
+
+.social-link:hover .social-icon {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Footer Titles */
+.footer-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #5bc0de;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #5bc0de;
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 0;
+}
+
+.footer-link::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 1px;
+    background: #5bc0de;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #5bc0de;
+    padding-left: 15px;
+}
+
+.footer-link:hover::before {
+    width: 8px;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.contact-icon {
+    font-size: 16px;
+    width: 20px;
+    flex-shrink: 0;
+}
+
+.contact-link {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #5bc0de;
+}
+
+.contact-text {
+    color: #bdc3c7;
+    font-size: 14px;
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(91, 192, 222, 0.2);
+}
+
+.newsletter-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #5bc0de;
+    margin: 0 0 8px 0;
+}
+
+.newsletter-description {
+    font-size: 13px;
+    color: #bdc3c7;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid rgba(189, 195, 199, 0.3);
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    font-size: 14px;
+    outline: none;
+}
+
+.newsletter-input::placeholder {
+    color: #95a5a6;
+}
+
+.newsletter-input:focus {
+    border-color: #5bc0de;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.newsletter-btn {
+    padding: 12px 20px;
+    background: #5bc0de;
+    color: white;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    background: #4aa3c7;
+    transform: translateY(-1px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(189, 195, 199, 0.2);
+    padding: 25px 0;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright p {
+    color: #95a5a6;
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.bottom-link {
+    color: #95a5a6;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.bottom-link:hover {
+    color: #5bc0de;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .footer-section {
+        padding-top: 40px;
+    }
+    
+    .social-links {
+        justify-content: flex-start;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .newsletter-input {
+        border-radius: 6px;
+        border-right: 1px solid rgba(189, 195, 199, 0.3);
+    }
+    
+    .newsletter-btn {
+        border-radius: 6px;
+    }
+    
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .company-description {
+        max-width: 100%;
+    }
+    
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .social-link,
+    .footer-link,
+    .newsletter-btn,
+    .social-icon {
+        transition: none;
+    }
+}
+
+/* Focus indicators */
+.social-link:focus,
+.footer-link:focus,
+.contact-link:focus,
+.bottom-link:focus,
+.newsletter-input:focus,
+.newsletter-btn:focus {
+    outline: 2px solid #5bc0de;
+    outline-offset: 2px;
+}
+
+
+/* Why Join Velocity Flex Section Styles */
+.why-join-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.benefit-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 35px 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border-top: 4px solid #5bc0de;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.featured-card {
+    border-top: 4px solid #4aa3c7;
+    background: linear-gradient(135deg, rgba(91, 192, 222, 0.05), rgba(74, 163, 199, 0.05));
+}
+
+.benefit-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.benefit-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 15px 0;
+}
+
+.benefit-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.benefit-highlight {
+    background: #5bc0de;
+    color: white;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.location-highlight {
+    background: linear-gradient(135deg, #5bc0de, #4aa3c7);
+}
+
+.cta-section {
+    text-align: center;
+    background: linear-gradient(135deg, #5bc0de, #4aa3c7);
+    border-radius: 15px;
+    padding: 50px 30px;
+    color: white;
+}
+
+.cta-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.cta-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .benefit-card {
+        padding: 30px 25px;
+    }
+    
+    .why-join-section {
+        padding: 50px 0;
+    }
+    
+    .cta-section {
+        padding: 40px 20px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .benefit-card {
+        padding: 25px 20px;
+    }
+    
+    .benefit-icon {
+        font-size: 40px;
+    }
+    
+    .cta-title {
+        font-size: 24px;
+    }
+}
